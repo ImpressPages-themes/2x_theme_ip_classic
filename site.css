@@ -1,0 +1,352 @@
+/**
+ *
+ * ImpressPages CMS theme: IP classic
+ *
+ * Main style file for structure, global styles.
+ *
+ * @package ImpressPages
+ * @copyright Copyright (C) 2011 ImpressPages LTD.
+ * @license see ip_license.html
+ *
+ * @fonts:
+ * text: 14px Arial, Helvetica, sans-serif
+ * menu: 12px Verdana, Geneva, sans-serif
+ * headlines: "Trebuchet MS", sans-serif / Arial, Helvetica, sans-serif
+ *
+ * @colors:
+ * content background: #fff
+ * margins background: #edf0f2
+ * text color: #4b4a4a
+ * link color: #1e8de5 / #f59a25
+ * heading color: #00a8da / #83b51e
+ * error text color: #f00
+ * error border color: #e53031
+ *
+ */
+
+/*
+    Disabling default styles
+*/
+html, body, h1, h2, h3, h4, h5, h6, img, blockquote, form, fieldset, label, p, ul, ol, li, dl, dd, dt {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #edf0f2 url(images/bg.jpg) repeat-x scroll top left;
+    color: #4b4a4a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+input, select, textarea, option, table {
+    color: #3c3c3c;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+table {
+    border-collapse: collapse;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3 {
+    font-size: 14px;
+}
+address {
+    font-style: normal;
+}
+
+/*
+    Global
+*/
+.clear { /* http://sonspring.com/journal/clearing-floats */
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+}
+.ipWidget:before,
+.ipWidget:after,
+.ipModuleForm .ipmField:before,
+.ipModuleForm .ipmField:after,
+.clearfix:before,
+.clearfix:after { /* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+    content: '.';
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+}
+.ipWidget:after,
+.ipModuleForm .ipmField:after,
+.clearfix:after {
+    clear: both;
+}
+.ipWidget,
+.ipModuleForm .ipmField,
+.clearfix {
+    zoom: 1;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+/*
+    Structure
+*/
+.main {
+    background: #fff;
+    border: 1px solid #ccc;
+    margin: 7px auto;
+    padding: 17px 34px;
+    width: 928px;
+}
+.pageHead {
+    height: 122px;
+}
+.headLogo {
+    border: none;
+    float: left;
+    margin-top: 30px;
+}
+.icons {
+    float: left;
+}
+.icons a {}
+.icons a img {
+    background-color: #f4f6f7;
+    border-bottom: none;
+    border-left: 1px solid #f5f5f3;
+    border-right: 1px solid #f7f9f9;
+    border-top: none;
+    cursor: pointer;
+    float: left;
+    margin-left: 10px;
+    padding: 3px;
+}
+.icons a img:hover {
+    background-color: #f5a519;
+}
+.languages {
+    float: left;
+    margin-left: 30px;
+}
+.languages li {
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.languages a {
+    background-color: #f4f6f7;
+    color: #3c3c3c;
+    font-size: 12px;
+    margin-left: 4px;
+    padding: 3px 6px;
+}
+.languages a:hover {
+    background-color: #f5a519;
+    color: #3c3c3c;
+}
+.languages .current a {
+    background-color: #26a5cb;
+    color: #fff;
+}
+
+/* top menu */
+.menuTop {
+    float: left;
+    margin-left: 30px;
+}
+.menuTop ul li {
+    float: left;
+    list-style: none;
+}
+.menuTop ul li a {
+    background-color: #f4f6f7;
+    color: #3c3c3c;
+    display: block;
+    font-size: 12px;
+    margin-right: 8px;
+    padding: 3px 6px;
+}
+.menuTop ul li a:hover {
+    background-color: #f5a519;
+    color: #3c3c3c;
+}
+.menuTop ul li.current a {
+    background-color: #26a5cb;
+    color: #fff;
+}
+/* /top menu */
+
+/* left menu */
+.side {
+    float: left;
+    width: 192px;
+}
+.side .box {
+    background-color: #f4f6f7;
+    display: block;
+    margin-bottom: 15px;
+    padding: 15px 26px 15px 20px;
+}
+.leftMenu ul {
+    border-top: 1px dotted #ccc;
+    list-style: none;
+}
+.leftMenu ul li {
+    border-bottom: 1px dotted #ccc;
+}
+.leftMenu ul li a {
+    color: #595959;
+    display: block;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 17px;
+    margin: 9px 0;
+    padding: 2px 7px;
+}
+.leftMenu ul li a:hover {
+    background-color: #f5a519;
+    color: #fff;
+}
+.leftMenu .level1 > li > a {
+    background: url(images/menu_icon.gif) no-repeat 6px 9px;
+    padding-left: 19px;
+}
+.leftMenu .level1 > .current > a {
+    background: #83b51e url(images/menu_icon_act.gif) no-repeat 6px 9px;
+    color: #fff;
+}
+.leftMenu .level1 li a:hover {
+    background: #f5a519 url(images/menu_icon_act.gif) no-repeat 6px 9px;
+}
+.leftMenu .level1 > .subnodes > a {
+    background: url(images/menu_plus.gif) no-repeat 6px 7px;
+    padding-left: 19px;
+}
+.leftMenu .level1 > .subnodes > a:hover {
+    background: #f5a519 url(images/menu_minus.gif) no-repeat 6px 7px;
+    padding-left: 19px;
+}
+.leftMenu .level1 > .current.subnodes > a {
+    background: #83b51e url(images/menu_minus.gif) no-repeat 6px 7px;
+    padding-left: 19px;
+}
+.leftMenu .level1 > .selected.subnodes > a {
+    background: url(images/menu_minus2.gif) no-repeat 6px 7px;
+    padding-left: 19px;
+}
+.leftMenu .level1 > .current.subnodes > a:hover,
+.leftMenu .level1 > .selected.subnodes > a:hover {
+    background: #f5a519 url(images/menu_minus.gif) no-repeat 6px 7px;
+    padding-left: 19px;
+}
+.leftMenu .level2 {
+    display: none;
+    margin-left: 7px;
+}
+.leftMenu .selected.subnodes .level2,
+.leftMenu .current.subnodes .level2 {
+    display: block;
+}
+.leftMenu .level2 li {
+    border-bottom: none;
+}
+.leftMenu .level2 li a {
+    background: url(images/menu_icon2.gif) no-repeat 8px 9px;
+    font-weight: normal;
+    padding-left: 18px;
+}
+.leftMenu .level2 li a:hover {
+    background: #f5a519 url(images/menu_icon2_act.gif) no-repeat 8px 9px;
+}
+.leftMenu .level2 .current a {
+    background: #83b51e url(images/menu_icon2_act.gif) no-repeat 8px 9px;
+    color: #fff;
+}
+/* /left menu */
+
+/* sub menu */
+.menuSub {}
+.menuSub ul {
+    background-color: #e3edf1;
+    float: left;
+    list-style: none;
+    margin-bottom: 24px;
+    margin-left: 46px;
+    padding: 18px;
+    width: 645px;
+}
+.menuSub ul li {}
+.menuSub ul li a {
+    background: url(images/menu_icon2.gif) no-repeat 8px 9px;
+    color: #595959;
+    display: block;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    line-height: 17px;
+    margin: 9px 0;
+    padding: 2px 7px 2px 18px;
+    text-decoration: none;
+    width: 200px;
+}
+.menuSub ul li a:hover {
+    background: #f5a519 url(images/menu_icon2_act.gif) no-repeat 8px 9px;
+    color: #fff;
+    font-weight: normal;
+}
+.menuSub ul .current a {
+    background: #83b51e url(images/menu_icon2_act.gif) no-repeat 8px 9px;
+    color: #fff;
+}
+/* /sub menu*/
+
+/* breadcrumb */
+.breadcrumb {
+    border-bottom: 1px solid #f5a519;
+    float: left;
+    margin-left: 46px;
+    margin-bottom: 12px;
+    padding: 4px;
+    width: 673px;
+}
+.breadcrumb a {
+    color: #595959;
+    font-size: 12px;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+/* /breadcrumb */
+
+.content {
+    float: left;
+    margin-left: 46px;
+    width: 673px;
+}
+.footer {
+    margin: 0 auto;
+    padding: 3px 0 20px;
+    width: 960px;
+}
+.footer p,
+.footer a {
+    color: #6d6b70;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    text-align: center;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
